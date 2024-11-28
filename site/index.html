@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Site Bureau 100% Front-End</title>
+    <link rel="stylesheet" href="inndex.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">BureauPro</div>
+            <ul class="nav-links">
+                <li><a href="./index.html" onclick="scrollToSection('accueil')">Accueil</a></li>
+                <li><a href="./services" onclick="scrollToSection('services')">Services</a></li>
+                <li><a href="./about" onclick="scrollToSection('about')">À propos</a></li>
+                <li><a href="./formatons.html" onclick="scrollToSection('about')">Formations</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue sur BureauPro</h1>
+            <p>Votre solution bureautique pour une productivité maximale.</p>
+            <a href="#services" class="cta-button">Nos services</a>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="services">
+        <h2>Nos Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <img src="images/formation.jpg" alt="Formation bureautique" class="card-image">
+                <h3>Formation</h3>
+                <p>Formation bureautique adaptée à vos besoins spécifiques. Apprenez à utiliser les outils de la suite Microsoft, Google, et bien plus encore, pour maximiser votre efficacité.</p>
+                <ul>
+                    <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+                    <li>Gestion de projets</li>
+                    <li>Formation en ligne disponible</li>
+                </ul>
+            </div>
+            <div class="card">
+                <img src="images/support.jpg" alt="Support technique" class="card-image">
+                <h3>Support</h3>
+                <p>Assistance technique et support à distance. Nous vous aidons à résoudre vos problèmes bureautiques à tout moment, avec un service réactif et professionnel.</p>
+                <ul>
+                    <li>Assistance téléphonique</li>
+                    <li>Assistance à distance via outils sécurisés</li>
+                    <li>Support pour logiciels bureautiques</li>
+                </ul>
+            </div>
+            <div class="card">
+                <img src="images/consulting.jpg" alt="Consulting en bureautique" class="card-image">
+                <h3>Consulting</h3>
+                <p>Conseil en optimisation des outils bureautiques. Nous analysons vos processus et vous proposons des solutions pour améliorer votre productivité et réduire vos coûts.</p>
+                <ul>
+                    <li>Optimisation des outils de travail</li>
+                    <li>Conseils sur les meilleures pratiques</li>
+                    <li>Audit et amélioration des flux de travail</li>
+                </ul>
+            </div>
+            <div class="card">
+                <img src="images/developpement.jpg" alt="Développement sur mesure" class="card-image">
+                <h3>Développement</h3>
+                <p>Solutions sur-mesure pour votre entreprise. Nous développons des applications personnalisées pour répondre à vos besoins spécifiques, en intégrant des outils bureautiques dans vos processus.</p>
+                <ul>
+                    <li>Développement d'outils personnalisés</li>
+                    <li>Intégration de logiciels</li>
+                    <li>Applications mobiles et web</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="about">
+        <h2>À propos de nous</h2>
+        <p>Nous sommes une équipe de professionnels passionnés par la bureautique, offrant des solutions efficaces pour améliorer votre productivité au quotidien. Grâce à notre expertise, nous vous aidons à optimiser vos outils bureautiques pour atteindre vos objectifs plus rapidement.</p>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+        <p>Pour plus d'informations, n'hésitez pas à nous contacter directement. Nous sommes à votre disposition pour répondre à toutes vos questions et vous fournir des conseils personnalisés.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 BureauPro. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Fonction pour faire défiler la page vers une section
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            window.scrollTo({
+                top: section.offsetTop - 60, // ajuster l'offset pour la navbar
+                behavior: 'smooth',
+            });
+        }
+
+        // Gestion du menu burger
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
