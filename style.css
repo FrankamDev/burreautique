@@ -16,7 +16,6 @@ body {
 /* En-tête */
 header {
   background-color: #00bcd4;
-  /* Bleu cyan */
   padding: 1rem 0;
 }
 
@@ -47,6 +46,10 @@ nav ul li a:hover {
   color: white;
   text-align: center;
   padding: 100px 20px;
+  min-height: 100vh;display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content h1 {
@@ -70,7 +73,7 @@ nav ul li a:hover {
 }
 
 .hero .btn-primary:hover {
-  background-color: #ff4081;
+  background-color: #d8edeff3;
 }
 
 /* Section des Services */
