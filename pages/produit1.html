@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services de Photocopie - Noir et Blanc</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     /* Styles généraux */
     body {
@@ -17,39 +20,20 @@
 
     header {
       background: #00BCD4;
-      padding: 15px 0;
     }
 
     .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+      margin-bottom: 40px;
     }
 
     .navbar-brand {
       color: white;
       font-size: 24px;
       font-weight: bold;
-      text-decoration: none;
-    }
-
-    .navbar-toggler {
-      border: none;
-      background: transparent;
-    }
-
-    .navbar-nav {
-      list-style: none;
-      display: flex;
-      gap: 20px;
     }
 
     .navbar-nav a {
       color: white;
-      text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
     }
@@ -159,11 +143,6 @@
 
     /* Responsive Styles */
     @media (max-width: 768px) {
-      .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
       .product-details .row {
         flex-direction: column;
       }
@@ -194,27 +173,29 @@
 <body>
 
   <!-- Navbar -->
-  <header class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="../index.html">FRANKAM</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="../index.html">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../services.html">Nos Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../formatons.html">Formations</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <a class="navbar-brand" href="../index.html">FRANKAM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../services.html">Nos Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../formatons.html">Formations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <!-- Service Header Section -->
@@ -282,4 +263,23 @@
   <footer>
     <p>&copy; 2024 BureauPro. Tous droits réservés.</p>
     <p><a href="mailto:fkamgang@gamil.fr">fkamgang06gmail@.fr</a></p>
- 
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Animation JavaScript
+    window.addEventListener('scroll', function () {
+      const elements = document.querySelectorAll('.hidden');
+      elements.forEach(function (element) {
+        if (element.getBoundingClientRect().top < window.innerHeight) {
+          element.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
