@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service de Photocopie - BureauPro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .product-details {
+            text-align: center;
+            margin-top: 50px;
+            padding: 0 20px;
+        }
+
+        .product-details h2 {
+            font-size: 2rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .service-description {
+            background-color: #eef2f7;
+            padding: 25px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            font-size: 1.1rem;
+            color: #555;
+            text-align: left;
+            margin: 40px auto;
+            max-width: 900px;
+        }
+
+        .service-description b {
+            color: #007bff;
+        }
+
+        .service-description ul {
+            margin-top: 20px;
+            padding-left: 20px;
+            font-size: 1.1rem;
+        }
+
+        .btn-request-service {
+            background-color: #28a745;
+            color: white;
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            margin-top: 20px;
+        }
+
+        .btn-request-service:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .info-card {
+            background-color: #fff;
+            width: 320px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+            position: relative;
+        }
+
+        .info-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .info-card p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .info-card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 8px 12px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background-color: #cc0000;
+            transform: scale(1.1);
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .service-description img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        @media (max-width: 767px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .product-details h2 {
+                font-size: 1.5rem;
+            }
+
+            .service-description {
+                padding: 20px;
+                font-size: 1rem;
+            }
+
+            .btn-request-service {
+                font-size: 1rem;
+                padding: 10px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Service de Photocopie - BureauPro</h1>
+    </header>
+
+    <section class="product-details">
+        <h2>Photocopiez vos documents en toute simplicité</h2>
+
+        <p class="service-description">
+            Vous avez besoin de photocopier des documents rapidement et avec précision ? 
+            <br>Chez <b style="color: #007bff;">BureauPro</b>, nous proposons des photocopies en noir et blanc de qualité professionnelle adaptées à tous vos besoins.
+            <br><br>
+            Nous offrons une large gamme de services de photocopie, incluant :
+            <ul>
+                <li>Photocopie de documents de petite et grande taille</li>
+                <li>Photocopies en noir et blanc, pour rapports, contrats, et plus encore</li>
+                <li>Formats standards (A4, A3, etc.) et formats personnalisés</li>
+                <li>Photocopies rapides et de qualité professionnelle</li>
+            </ul>
+            <br>
+            Nous nous engageons à respecter vos délais et vous garantir un service de photocopie fiable et de qualité supérieure.
+            <br><br>
+            <img src="https://via.placeholder.com/600x300" alt="Service de Photocopie BureauPro">
+        </p>
+
+        <button class="btn-request-service" onclick="showInfoCard()">Nous Joindre</button>
+    </section>
+
+    <div id="overlay" class="overlay">
+        <div class="info-card">
+            <button class="close-btn" onclick="closeInfoCard()">×</button>
+            <h4>Informations de Contact</h4>
+            <p><strong>Nom :</strong> BureauPro</p>
+            <p><strong>Email :</strong> <a href="mailto:contact@bureaupro.com">contact@bureaupro.com</a></p>
+            <h5>Adresse: <i>Yaoundé, Cameroun</i></h5>
+            <p><strong>Téléphone :</strong> +237 699 123 456</p>
+        </div>
+    </div>
+
+    <script>
+        function showInfoCard() {
+            document.getElementById("overlay").style.display = "flex";
+        }
+
+        function closeInfoCard() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

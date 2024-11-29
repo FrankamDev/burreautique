@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service de Saisie de Texte - BureauPro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #00BCD4;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-details {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn-request-service {
+            background-color: #007bff;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-request-service:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Overlay (sombre) */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Information Card */
+        .info-card {
+            background-color: #fff;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .info-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .info-card a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        /* Animation for the info card */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background-color: #cc0000;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <h1>Service de Saisie de Texte - BureauPro</h1>
+    </header>
+
+    <!-- Product Details Section -->
+    <section class="product-details">
+        <h2>Saisir vos documents avec efficacité et rapidité</h2>
+        <p style="width: 90%; margin: 40px auto; text-align: center; background: #dee4e9; box-shadow: 10px 10px 10px -4px black; padding: 15px 12px; font-weight: 600; font-size: 1.2rem; word-spacing: 5px;">
+            Vous avez besoin de saisir des documents importants rapidement et avec précision ? 
+            <br>Chez <b style="color: #0056b3;">BureauPro</b>, nous offrons un service de saisie de textes professionnel pour répondre à tous vos besoins. 
+            Que ce soit pour la saisie de manuscrits, la transcription de fichiers audio ou la conversion de documents en formats numériques, nous avons la solution.
+            <br><br>
+            Nous garantissons :
+            <ul style="text-align:left; margin-left: 20px; font-size: 1.1rem;">
+                <li>Saisie rapide et fiable de vos documents</li>
+                <li>Respect des délais et de la confidentialité</li>
+                <li>Saisie de textes dans tous les formats : Word, Excel, PDF, etc.</li>
+                <li>Transcription de fichiers audio (interviews, réunions, conférences)</li>
+            </ul>
+            <br>
+            Contactez-nous pour toute demande ou pour plus d'informations. Nous nous engageons à fournir un service de qualité !
+        </p>
+
+        <!-- Request Service Button -->
+        <button class="btn-request-service" onclick="showInfoCard()">Nous Joindre</button>
+    </section>
+
+    <!-- Overlay with Info Card -->
+    <div id="overlay" class="overlay">
+        <div class="info-card">
+            <button class="close-btn" onclick="closeInfoCard()">×</button>
+            <h4>Informations de Contact</h4>
+            <p><strong>Nom :</strong> BureauPro</p>
+            <p><strong>Email :</strong> <a href="mailto:contact@bureaupro.com">contact@bureaupro.com</a></p>
+            <h5>Adresse: <i>Yaoundé, Cameroun</i></h5>
+            <p><strong>Téléphone :</strong> +237 699 123 456</p>
+        </div>
+    </div>
+
+    <script>
+        function showInfoCard() {
+            document.getElementById("overlay").style.display = "flex";
+        }
+
+        function closeInfoCard() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

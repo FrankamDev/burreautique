@@ -1,0 +1,145 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Photocopie Section */
+.photocopie {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.photocopie h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.photocopie p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.photocopie-description {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.photocopie-info {
+  width: 45%;
+  margin: 20px 0;
+}
+
+.photocopie-info h3 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.photocopie-info p {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.photocopie-info img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.photocopie-options {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.photocopie-option {
+  width: 45%;
+  margin: 20px 0;
+}
+
+.photocopie-option h3 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.photocopie-option p {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.photocopie-option img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.photocopie-contact {
+  background-color: #0066cc;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.photocopie-contact h3 {
+  font-size: 28px;
+  margin-bottom:

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit - Ajouter au Panier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-details {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn-add-to-cart {
+            background-color: #007bff;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-add-to-cart:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Overlay (sombre) */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Information Card */
+        .info-card {
+            background-color: #fff;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .info-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .info-card a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        /* Animation for the info card */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+        }
+
+        .close-btn:hover {
+            background-color: #cc0000;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+    <h1>Produit Phare - Apprendre La Programmation <i style="color: aquamarine;">!!!</i></h1>
+</header>
+
+<!-- Product Details Section -->
+<section class="product-details">
+    <h2>Vous rêvez d'apprendre la programmation ? Nous avons la solution qu'il vous faut !  <i style="text-align: justify; color: rgb(94, 170, 214);">!</i></h2>
+    <p style="width: 90%; margin: 40px auto; text-align: 'center'; background: #dee4e9e6; box-shadow: 10px 10px 10px -4px black; padding: 15px 12px; font-weight: 600; font-size: 1.2rem; word-spacing: 5px;">
+
+La programmation est une compétence essentielle dans le monde numérique d'aujourd'hui, et nous sommes là pour vous aider à la maîtriser ! Que vous soyez un débutant complet ou que vous souhaitiez perfectionner vos compétences, nous vous offrons une formation pratique, interactive et accessible.
+
+Pourquoi apprendre la programmation avec nous ?
+
+Des cours adaptés à votre niveau : Apprenez à votre rythme, avec des modules personnalisés pour chaque étape de votre apprentissage.
+Apprentissage par la pratique : Codez des projets réels dès le début et appliquez vos compétences sur des projets concrets.
+Support continu : Notre équipe d'experts est là pour vous guider et répondre à toutes vos questions à chaque étape de votre apprentissage.
+Accès à vie : Apprenez quand vous le souhaitez, où vous le souhaitez, avec des ressources accessibles à tout moment.
+Ne laissez pas passer cette opportunité ! Que vous souhaitiez créer des applications, des sites web, ou même vous lancer dans le développement de jeux vidéo, nous vous offrons les clés pour réussir.
+
+Rejoignez-nous aujourd'hui et transformez votre passion en compétence ! La programmation n'a jamais été aussi accessible. Commencez maintenant et devenez un développeur de demain !</p>
+    
+
+    <!-- Add to Cart Button -->
+    <button class="btn-add-to-cart" onclick="showInfoCard()">Nous Joindre</button>
+</section>
+
+<!-- Overlay with Info Card -->
+<div id="overlay" class="overlay">
+    <div class="info-card">
+        <button class="close-btn" onclick="closeInfoCard()">×</button>
+        <h4>Propriétaire du site</h4>
+        <p><strong>Nom :</strong>Dreyer's Computer</p>
+        <p><strong>Email :</strong> <a href="mailto:contact@depannageinformatique.fr">dreyer'sComputer@gmail.com</a></p>
+        <h5>Adresse: <i>Sens Interdit-Bafoussam</i></h5>
+        <p><strong>Téléphone :</strong>+237 697 47 57 00</p>
+    </div>
+</div>
+
+<script>
+    
+    function showInfoCard() {
+        document.getElementById("overlay").style.display = "flex";
+    }
+
+    function closeInfoCard() {
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

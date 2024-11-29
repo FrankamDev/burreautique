@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demander un Avis - Service de Saisie</title>
+  <style>
+    /* Styles généraux */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      text-align: center;
+      width: 90%;
+      max-width: 700px;
+      transition: transform 0.3s ease;
+    }
+
+    h1 {
+      color: #00BCD4;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #555;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    /* Style des boutons */
+    .btn {
+      background: #00BCD4;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background: #008C9E;
+      transform: translateY(-5px);
+    }
+
+    .btn:focus {
+      outline: none;
+    }
+
+    /* Animation pour le bouton */
+    .pulse {
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Style de la section de commentaires */
+    .comment-section {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .comment-card {
+      background: #00BCD4;
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .comment-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .comment-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .comment-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding: 30px;
+      }
+
+      .comment-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .comment-card {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Conteneur principal -->
+  <div class="container">
+    <h1>Demandez un Avis</h1>
+    <p>Recevez des avis personnalisés sur notre service. Cliquez sur le bouton ci-dessous pour en savoir plus et découvrir les retours de nos clients.</p>
+
+    <!-- Bouton animé -->
+    <button class="btn pulse" onclick="showComments()"><a href="./cc1.html">Voir les Avis</a></button>
+    
+
+    <!-- Section des avis -->
+    <div class="comment-section" id="commentSection" style="display: none;">
+      <!-- Avis 1 -->
+      <div class="comment-card">
+        <h3>Herman Dupont</h3>
+        <p>Un service rapide et efficace, j'ai reçu mon avis en un clin d'œil. Hautement recommandé !</p>
+      </div>
+      <!-- Avis 2 -->
+      <div class="comment-card">
+        <h3>Frank Kamgang</h3>
+        <p>Très professionnel et réactif, je suis très satisfait de la qualité du service. Merci beaucoup !</p>
+      </div>
+      <!-- Avis 3 -->
+      <div class="comment-card">
+        <h3>Theophile Kamdem</h3>
+        <p>Excellent service, très rapide et facile à utiliser. Je reviendrai à coup sûr pour d'autres services.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Fonction pour afficher les avis
+    function showComments() {
+      const commentSection = document.getElementById('commentSection');
+      commentSection.style.display = 'flex'; 
+    }
+  </script>
+
+</body>
+
+</html>
