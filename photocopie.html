@@ -1,18 +1,179 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Photocopie - BureauPro</title>
-    
-    <link rel="stylesheet" href="photocopie.css">
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #00BCD4;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff9800;
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        h2, h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .photocopie-description,
+        .photocopie-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .photocopie-info,
+        .photocopie-option {
+            width: 48%;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .photocopie-info img,
+        .photocopie-option img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .photocopie-info:hover,
+        .photocopie-option:hover {
+            transform: translateY(-10px);
+        }
+
+        .photocopie-description a,
+        .photocopie-option a {
+            display: inline-block;
+            background: cyan;
+            padding: 12px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            color: black;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .photocopie-description a:hover,
+        .photocopie-option a:hover {
+            background: #0288d1;
+        }
+
+        .photocopie-contact {
+            background: #00BCD4;
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .contact-btn {
+            background: cyan;
+            padding: 12px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            color: black;
+        }
+
+        .contact-btn:hover {
+            background: #0288d1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        /* Media Queries pour la responsivité */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .photocopie-info,
+            .photocopie-option {
+                width: 100%;
+            }
+        }
+
+        /* Animation au défilement */
+        .hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
-    <header >
-        <nav class="navbar" style="background: #00BCD4;">
+    <header>
+        <nav class="navbar">
             <div class="logo">BureauPro</div>
             <ul class="nav-links">
                 <li><a href="index.html" onclick="scrollToSection('accueil')">Accueil</a></li>
@@ -27,55 +188,64 @@
     <section id="photocopie" class="photocopie">
         <h2>Nos Services de Photocopie</h2>
         <p>Chez BureauPro, nous proposons des services de photocopie pour tous vos besoins, qu'il s'agisse de petites ou grandes quantités, en couleur ou en noir et blanc.</p>
-        
+
         <div class="photocopie-description">
-            <div class="photocopie-info">
+            <div class="photocopie-info hidden">
                 <h3>Photocopies en Noir et Blanc</h3>
-                <a href="./pages/produit1.html" style=" margin: 22px 0; background: cyan; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 800; " >Voir plus</a>
+                <a href="./pages/produit1.html">Voir plus</a>
                 <p>Nous réalisons vos photocopies en noir et blanc avec une grande précision et rapidité. Idéal pour les documents administratifs, les rapports ou les contrats.</p>
                 <img src="./images/photocopie.jpg" alt="Photocopie en couleur">
             </div>
-            
-            <div class="photocopie-info">
+
+            <div class="photocopie-info hidden">
                 <h3>Photocopies en Couleur</h3>
-                <a href="./pages/produit2.html" style="background: cyan; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 800; " >Voir plus</a>
+                <a href="./pages/produit2.html">Voir plus</a>
                 <p>Nous proposons des photocopies en couleur de haute qualité pour vos présentations, flyers, brochures ou tout autre document nécessitant une reproduction en couleurs vives et nettes.</p>
                 <img src="./images/print-159336_1920.png" alt="Photocopie en noir et blanc">
             </div>
         </div>
 
         <div class="photocopie-options">
-            <div class="photocopie-option">
+            <div class="photocopie-option hidden">
                 <h3>Photocopies en Grand Format</h3>
                 <p>Pour vos affiches, posters, plans et documents de grande taille, nous mettons à votre disposition des photocopieuses adaptées pour des reproductions en grand format.</p>
                 <img src="./images/photocopie.jpg" alt="Photocopie grand format">
             </div>
-            <div class="photocopie-option">
-                <h3>Photocopies en Grand Format</h3>
-                <p>Pour vos affiches, posters, plans et documents de grande taille, nous mettons à votre disposition des photocopieuses adaptées pour des reproductions en grand format.</p>
-                <img src="./images/copier-312389_1920.png" alt="Photocopie grand format">
-            </div>
-
-            <div class="photocopie-option">
+            <div class="photocopie-option hidden">
                 <h3>Photocopies en Petit Format</h3>
                 <p>Nous offrons également des photocopies en petit format (A5, A6) pour vos cartes de visite, documents légers ou brochures compactes.</p>
                 <img src="https://images.unsplash.com/photo-1561001001-8987271837c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjY0MnwwfDF8c2VhcmNofDh8fHByb2Nlc3NlcyUyMGFjdGl2ZXxlbnwwfHx8fDE2OTMzNzE5Mzc&ixlib=rb-1.2.1&q=80&w=1080" alt="Photocopie petit format">
             </div>
         </div>
 
-        <div class="photocopie-contact" style="background: #00BCD4;">
+        <div class="photocopie-contact">
             <h3>Besoin de Plus d'Informations ?</h3>
             <p>Si vous avez des questions ou si vous souhaitez demander un devis, n'hésitez pas à nous contacter. Nous sommes là pour vous aider à concrétiser vos projets.</p>
-            <a href="mailto:fkamgang06@gmail.com" style="background: cyan; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 800; " class="contact-btn">Contactez-nous</a>
-
+            <a href="mailto:fkamgang06@gmail.com" class="contact-btn">Contactez-nous</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer >
+    <footer>
         <p>&copy; 2024 BureauPro. Tous droits réservés.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Fonction pour animer l'apparition des éléments
+        const elements = document.querySelectorAll('.hidden');
+        const animateOnScroll = () => {
+            elements.forEach((element) => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Initialisation de l'animation à l'ouverture de la page
+    </script>
+
 </body>
+
 </html>
