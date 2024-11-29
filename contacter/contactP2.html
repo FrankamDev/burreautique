@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produit - Ajouter au Panier</title>
+    <title>Service - Photocopie</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
     <style>
@@ -19,26 +19,61 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+            border-bottom: 2px solid #ddd;
         }
 
         .product-details {
             text-align: center;
             margin-top: 50px;
+            padding: 0 10%;
         }
 
         .btn-add-to-cart {
             background-color: #007bff;
             color: white;
             font-size: 1.2rem;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 15px 30px;
+            border-radius: 30px;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
         }
 
         .btn-add-to-cart:hover {
             background-color: #0056b3;
-            transform: scale(1.05);
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Amélioration du style de la carte contenant le texte long */
+        .product-description {
+            width: 90%;
+            margin: 40px auto;
+            padding: 25px;
+            background: linear-gradient(145deg, #e4e9f0, #ffffff);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            text-align: left;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .product-description:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .product-description b {
+            color: #0056b3;
+            font-weight: 700;
+        }
+
+        .product-description i {
+            color: #007bff;
         }
 
         /* Overlay (sombre) */
@@ -53,58 +88,50 @@
             z-index: 999;
             justify-content: center;
             align-items: center;
+            animation: fadeIn 0.5s ease-in-out;
         }
 
         /* Information Card */
         .info-card {
             background-color: #fff;
-            width: 300px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
             animation: slideIn 0.5s ease-out;
+            transform: translateY(-50px);
+            animation: movePopup 3s ease-in-out infinite;
         }
 
         .info-card h4 {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             margin-bottom: 10px;
+            color: #333;
         }
 
         .info-card p {
             font-size: 1rem;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             color: #555;
         }
 
         .info-card a {
             text-decoration: none;
             color: #007bff;
+            font-weight: bold;
         }
 
-        /* Animation for the info card */
-        @keyframes slideIn {
-            0% {
-                transform: translateY(-100px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Close button */
         .close-btn {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 15px;
+            right: 15px;
             background-color: #ff4d4d;
             color: white;
             border: none;
             border-radius: 50%;
-            padding: 5px 10px;
-            font-size: 1.2rem;
+            padding: 8px;
+            font-size: 1.5rem;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -113,32 +140,69 @@
             background-color: #cc0000;
             transform: scale(1.1);
         }
+
+        /* Animation for overlay and info card */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Animation to make the popup move constantly */
+        @keyframes movePopup {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(-10px, -10px);
+            }
+            50% {
+                transform: translate(10px, 10px);
+            }
+            75% {
+                transform: translate(-10px, 10px);
+            }
+            100% {
+                transform: translate(10px, -10px);
+            }
+        }
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
 <header>
-    <h1>Produit Phare - Presence des virus <i style="color: aquamarine;">?</i></h1>
+    <h1>Service de Photocopie - Haut de Gamme</h1>
 </header>
 
 <!-- Product Details Section -->
 <section class="product-details">
-    <h2>Votre ordinateur est infecté par des virus <i style="color: rgb(94, 170, 214);">?</i> Pas de panique, nous pouvons vous aider ! </h2>
-    <p style="width: 90%; margin: 40px auto; text-align: 'center'; background: #dee4e9e6; box-shadow: 10px 10px 10px -4px black; padding: 15px 12px; font-weight: 600; font-size: 1.2rem; word-spacing: 5px;"
- <h3></h3>
-
-Chez <b style="color: #0056b3; background: #f4f4f9;">Dreyer'S Computer</b> , nous comprenons l'importance de vos données personnelles et professionnelles. C'est pourquoi nous vous garantissons une suppression complète des virus tout en préservant la sécurité et l'intégrité de vos fichiers.
-
-Nos techniciens expérimentés utilisent des outils professionnels pour détecter et éliminer toutes les menaces, sans jamais compromettre vos documents, photos ou tout autre fichier important.
-
-Le tout à un prix abordable !
-Nous vous proposons une solution rapide et efficace, adaptée à votre budget. Vous pouvez avoir l'esprit tranquille : votre ordinateur sera comme neuf, et vos données resteront protégées.
-
-Contactez-nous dès aujourd'hui pour un diagnostic gratuit et découvrez comment nous pouvons vous aider à retrouver un ordinateur sécurisé à un tarif compétitif.
-
-Faites confiance à nos experts pour éliminer les virus sans risque pour vos données !</p>
+    <h2>Vous avez besoin de photocopies ? <i style="color: rgb(94, 170, 214);">Nous sommes là pour vous !</i></h2>
     
+    <!-- Description Card -->
+    <div class="product-description">
+        Chez <b style="color: #0056b3; background: #f4f4f9;">BureauPro</b>, nous vous proposons un service de photocopie rapide et fiable pour tous vos besoins professionnels et personnels.
+        <br><br>
+        Que vous ayez besoin de copies de documents importants, de photos, ou de tout autre fichier, nous nous assurons que chaque copie est nette, claire et professionnelle. Vous pouvez choisir entre différents formats (A4, A3, etc.) et options (noir et blanc ou couleur, recto-verso, etc.).
+        <br><br>
+        Nos tarifs sont abordables et compétitifs, et nous garantissons un service rapide pour ne pas vous faire perdre de temps.
+        <br><br>
+        Contactez-nous dès maintenant pour une estimation gratuite ou pour en savoir plus sur nos services de photocopie.
+    </div>
 
     <!-- Add to Cart Button -->
     <button class="btn-add-to-cart" onclick="showInfoCard()">Nous Joindre</button>
@@ -149,15 +213,14 @@ Faites confiance à nos experts pour éliminer les virus sans risque pour vos do
     <div class="info-card">
         <button class="close-btn" onclick="closeInfoCard()">×</button>
         <h4>Propriétaire du site</h4>
-        <p><strong>Nom :</strong>Dreyer's Computer</p>
+        <p><strong>Nom :</strong> Dreyer's Computer</p>
         <p><strong>Email :</strong> <a href="mailto:fkamgang06@gmail.com">dreyer'sComputer@gmail.com</a></p>
         <h5>Adresse: <i>Sens Interdit-Bafoussam</i></h5>
-        <p><strong>Téléphone :</strong>+237 697 47 57 00</p>
+        <p><strong>Téléphone :</strong> +237 697 47 57 00</p>
     </div>
 </div>
 
 <script>
-    
     function showInfoCard() {
         document.getElementById("overlay").style.display = "flex";
     }
