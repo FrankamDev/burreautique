@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
 
 <head>
@@ -9,61 +9,31 @@
     <!-- Viewport pour la responsivité -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Titre du site (important pour le SEO) -->
-    <title>Votre Site - Description de l'entreprise ou de la page</title>
+    <!-- Titre du site -->
+    <title>Votre Site - Solutions Bureautiques</title>
 
-    <!-- Description du site (important pour le SEO) -->
-    <meta name="description" content="Votre entreprise propose des solutions bureautiques pour améliorer la productivité, les services comprennent la formation, le support, le consulting et le développement sur-mesure.">
-
-    <!-- Mots-clés pour améliorer le référencement -->
-    <meta name="keywords" content="bureautique, formation, support, consulting, développement, productivité, solutions informatiques, services en entreprise">
-
-    <!-- Auteur du site (facultatif) -->
-    <meta name="author" content="Nom de l'entreprise ou auteur">
-
-    <!-- Balise Robots pour le contrôle du référencement -->
-    <meta name="robots" content="index, follow">
-
-    <!-- Balises Open Graph pour l'optimisation sur les réseaux sociaux -->
-    <meta property="og:title" content="BureauPro - Solutions Bureautiques">
-    <meta property="og:description" content="Découvrez nos services de formation, de support, de consulting et de développement bureautique pour améliorer la productivité de votre entreprise.">
-    <meta property="og:image" content="https://votre-site.com/images/og-image.jpg">
-    <meta property="og:url" content="https://votre-site.com">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="BureauPro">
-    
-    <!-- Twitter Cards pour l'optimisation sur Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="BureauPro - Solutions Bureautiques">
-    <meta name="twitter:description" content="Améliorez la productivité de votre entreprise avec nos services bureautiques. Formation, support, consulting et développement sur-mesure.">
-    <meta name="twitter:image" content="https://votre-site.com/images/twitter-image.jpg">
-
-    <!-- Liens de la page -->
-    <link rel="canonical" href="https://burreautique.vercel.app/services.html">
+    <!-- Description et mots-clés pour le SEO -->
+    <meta name="description" content="Solutions bureautiques pour améliorer la productivité de votre entreprise avec des services de formation, de support, de consulting et de développement.">
+    <meta name="keywords" content="bureautique, formation, support, consulting, développement, productivité, entreprise, solutions">
 
     <!-- Favicon du site -->
     <link rel="icon" href="./images/excel-5963669_1920.png" type="image/x-icon">
 
-    <!-- Liens vers les fichiers CSS (optimisation pour le SEO et la vitesse) -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Inclure les polices Google (optimisation pour les performances et l'apparence) -->
+    <!-- Liens vers les polices Google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Script pour ajouter la compatibilité avec les anciennes versions de IE -->
-    <!--[if IE]>
-    <script src="html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Open Graph Meta Tags (pour les moteurs de recherche comme Google) -->
-    <meta name="robots" content="index, follow"> <!-- Cette ligne aide Google à suivre les pages -->
+    <!-- Animation AOS (Animate On Scroll) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<link rel="stylesheet" href="./style.css">
+    <style>
+      
+    </style>
 </head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 <body>
 
     <!-- En-tête -->
-    <header class="header">
+    <header>
         <nav>
             <ul class="nav-list">
                 <li><a href="./index.html">Accueil</a></li>
@@ -74,8 +44,8 @@
         </nav>
     </header>
 
-    <!-- Section d'introduction - Accueil -->
-    <section id="home" class="hero" data-aos="fade-up">
+    <!-- Section d'introduction -->
+    <section class="hero" data-aos="fade-up">
         <div class="hero-content">
             <h1>Bienvenue chez FRANKAM</h1>
             <p>Des services bureautiques professionnels pour votre entreprise.</p>
@@ -84,56 +54,52 @@
     </section>
 
     <!-- Section des services -->
-    <section id="services" class="services" data-aos="fade-up">
+    <section class="services" data-aos="fade-up">
         <h2>Nos Services</h2>
         <div class="service-list">
-            <div class="service" data-aos="zoom-in" >
+            <div class="service" data-aos="zoom-in">
                 <h3>Photocopie</h3>
-                <p>Nous vous offrons des services de photocopie rapides, clairs et de qualité pour toutes vos
-                    impressions.</p>
-                    <a href="./photocopie.html">Voir plus</a>
-                </div>
-                <div class="service" data-aos="zoom-in">
-                    <h3>Saisie de données</h3>
-                    <p>Nous assurons la saisie précise de toutes vos données avec un service rapide et fiable.</p>
-                    <a href="./pages/produit1.html">Voir plus</a>
-                </div>
-                <div class="service" data-aos="zoom-in">
+                <p>Services de photocopie rapides, clairs et de qualité.</p>
+                <a href="./photocopie.html">Voir plus</a>
+            </div>
+            <div class="service" data-aos="zoom-in">
+                <h3>Saisie de données</h3>
+                <p>Saisie précise et rapide de toutes vos données.</p>
+                <a href="./pages/produit1.html">Voir plus</a>
+            </div>
+            <div class="service" data-aos="zoom-in">
                 <h3>Formation bureautique</h3>
-                <p>Nos formations sont conçues pour vous rendre plus efficace avec les outils bureautiques
-                    essentiels.</p>
-                    <a href="./formatons.html">Voir plus</a>
+                <p>Formations pour devenir plus efficace avec les outils bureautiques.</p>
+                <a href="./formatons.html">Voir plus</a>
             </div>
         </div>
     </section>
 
-  
-    <section id="testimonials" class="testimonials" data-aos="fade-up">
+    <!-- Section témoignages -->
+    <section class="testimonials" data-aos="fade-up">
         <h2>Ce que nos clients disent</h2>
         <div class="testimonial-list">
             <div class="testimonial">
-                <p>"FRANKAM a toujours été réactif et professionnel. Leur service de saisie est d'une grande
-                    qualité."</p>
+                <p>"FRANKAM a toujours été réactif et professionnel."</p>
                 <p><strong>Jean Dupont</strong></p>
             </div>
             <div class="testimonial">
-                <p>"Des formations bureautiques très complètes, adaptées à mes besoins. Je recommande vivement !"</p>
+                <p>"Des formations complètes et adaptées à mes besoins. Je recommande vivement !"</p>
                 <p><strong>Marie Martin</strong></p>
             </div>
         </div>
     </section>
 
-    <!-- Section Contact -->
-    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Dépannage Informatique. Tous droits réservés.</p>
+        <p><a href="mailto:fkamgang06@gmail.com">Contactez-nous par email</a></p>
+        <p>By #Frank_kamgang</p>
+    </footer>
 
-    <!-- Pied de page -->
-   <footer class="bg-dark text-white text-center py-4">
-    <p>&copy; 2024 Dépannage Informatique. Tous droits réservés.</p>
-    <p><a href="mailto:fkamgang06@gmail.com" class="text-white">dreyercomputer@gmail.com</a></p>
-    <p style="text-decoration: inherit; color: rgba(10, 84, 123, 0.855);">By #Frank_kamgang</p>
-</footer>
-
-    <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
