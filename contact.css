@@ -117,7 +117,13 @@
    color: #007bffe6;
    z-index: 12;
  }
+ .icons a{
+margin: 12px 0;
+}
+.icons a i{
+  
 
+}
  .icons i:hover {
    padding: 5px;
 
