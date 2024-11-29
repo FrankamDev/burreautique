@@ -102,7 +102,7 @@
             border-radius: 12px;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
             text-align: center;
-            animation: slideIn 0.5s ease-out;
+            animation: popUp 1s ease-in-out infinite;
             position: relative;
         }
 
@@ -142,15 +142,15 @@
             transform: scale(1.1);
         }
 
-        @keyframes slideIn {
+        @keyframes popUp {
             0% {
-                transform: translateY(-100px);
-                opacity: 0;
+                transform: translateY(0);
             }
-
+            50% {
+                transform: translateY(-10px);
+            }
             100% {
                 transform: translateY(0);
-                opacity: 1;
             }
         }
 
